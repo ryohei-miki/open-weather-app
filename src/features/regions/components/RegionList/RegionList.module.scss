@@ -1,3 +1,5 @@
+@import "../../../../theme/variables.scss";
+
 .RegionList {
   display: flex;
   flex-direction: column;
@@ -6,5 +8,5 @@
   width: 100%;
   max-width: 260px;
   border-radius: 4px;
-  border: 1px solid #ddd;
+  border: 1px solid $border-color;
 }

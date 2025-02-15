@@ -1,3 +1,5 @@
+@import "../../../../theme/variables.scss";
+
 .RegionListItem{
   width: 100%;
   text-align: center;
@@ -13,9 +15,9 @@
     padding: 20px 20px;
   }
   & + & {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid $border-color;
   }
   &:hover {
-    background-color: #e5e5e8;
+    background-color: $gray-color;
   }
 }

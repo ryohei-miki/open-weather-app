@@ -22,7 +22,6 @@ export default function WeatherForecast() {
 
   return (
     <div className={styles.WeatherForecast}>
-      <h2 className={styles.WeatherForecastTitle}>天気予報</h2>
       {isLoading && <div>Loading...</div>}
       {weather && (
         <>
