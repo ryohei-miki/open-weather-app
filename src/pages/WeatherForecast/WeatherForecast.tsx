@@ -22,7 +22,7 @@ export default function WeatherForecast() {
 
   return (
     <div className={styles.WeatherForecast}>
-      {isLoading && <div>Loading...</div>}
+      {isLoading && <div className={styles.WeatherForecastLoading}>Loading...</div>}
       {weather && (
         <>
           <LinkButton to="/" className={styles.BackButton}>
