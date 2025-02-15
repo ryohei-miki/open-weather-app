@@ -1,0 +1,17 @@
+:root{
+  font-size: 13px;
+  background-color: #fff;
+  color: #333;
+}
+
+body {
+  font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+}
+
+:focus-visible {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
