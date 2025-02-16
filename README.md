@@ -2,6 +2,8 @@
 
 OpenWeatherMap APIを使用した天気予報アプリケーションです。
 
+https://open-weather-app-eight.vercel.app/
+
 ## 機能
 
 - `東京`、`兵庫`、`大分`、`北海道`の天気予報を表示
