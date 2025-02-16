@@ -1,5 +1,5 @@
 import styles from "./WeatherForecastListItem.module.scss";
-import { formatDate } from "../../../../utils/dateFormatter";
+import { formatDate } from "../../../../utils/dateFormatter/dateFormatter";
 import { WeatherForecast } from "../../types";
 
 type Props = {

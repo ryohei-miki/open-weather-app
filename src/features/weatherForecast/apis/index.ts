@@ -1,5 +1,5 @@
-import type { WeatherForecast } from "./types";
-import type { CustomErrorResponse } from "../../types/customError";
+import type { CustomErrorResponse } from "../../../types/customError";
+import type { WeatherForecast } from "../types";
 
 export const fetchWeatherForecast = async (key: string): Promise<WeatherForecast> => {
   const response = await fetch(
