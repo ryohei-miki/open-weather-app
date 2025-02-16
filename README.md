@@ -1,50 +1,63 @@
-# React + TypeScript + Vite
+# Open Weather ⚡ App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+OpenWeatherMap APIを使用した天気予報アプリケーションです。
 
-Currently, two official plugins are available:
+## 機能
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- `東京`、`兵庫`、`大分`、`北海道`の天気予報を表示
+  - 5日間の3時間ごとの天気予報を確認可能
+- レスポンシブ表示対応
 
-## Expanding the ESLint configuration
+## 技術スタック
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React
+- TypeScript
+- Vite
+- React Router v7
+- SWR
+- CSS Modules
+- Vitest
+- React Testing Library
 
-- Configure the top-level `parserOptions` property like this:
+## 開発環境のセットアップ
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1.envファイルの作成、編集
+
+```bash
+cp .env.example .env
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+```bash
+VITE_API_KEY=your_api_key
+VITE_BASE_API_URL=https://api.openweathermap.org/data/2.5
+```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2.プロジェクトのclone
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+git clone https://github.com/your-repo/weather-forecast-app.git
+```
+
+3.依存パッケージのインストール
+
+```bash
+npm install
+```
+
+3.開発サーバーの起動
+
+```bash
+npm run dev
+```
+
+4.ビルド
+
+```bash
+npm run build
+```
+
+## テストの実行
+
+```bash
+npm run test
 ```
