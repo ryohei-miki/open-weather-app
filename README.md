@@ -23,6 +23,10 @@ https://open-weather-app-eight.vercel.app/
 
 ## 開発環境のセットアップ
 
+
+***※Node.js 20以上のバージョンが必要です***
+
+
 1.envファイルの作成、編集
 
 ```bash
