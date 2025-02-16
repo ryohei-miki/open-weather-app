@@ -1,6 +1,6 @@
-@import "../../../../theme/variables.scss";
+@use "../../../../theme/variables.scss" as *;
 
-.RegionListItem{
+.RegionListItem {
   width: 100%;
   text-align: center;
   opacity: 1;
