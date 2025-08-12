@@ -1,0 +1,81 @@
+name: "✨ 改善"
+description: "既存機能の改善（UX/UI/性能など）を提案する"
+title: "[Improve]: "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: 種別
+      description: 改善の主なカテゴリを選択してください
+      options:
+        - UX（使い勝手）
+        - UI（見た目/レイアウト）
+        - パフォーマンス
+        - アクセシビリティ
+        - その他
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: 背景 / 課題
+      description: なぜ改善が必要か、現状の課題を記載してください
+      placeholder: |
+        - 背景
+          - 検索結果の初期表示に時間がかかり離脱率が高い
+        - 課題
+          - スケルトン表示がなく体感が悪い
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 改善内容（案）
+      description: 具体的な改善案と期待効果を記載してください
+      placeholder: |
+        - 案
+          - 初期読み込みを分割し、Fold上のみ優先描画
+          - スケルトンスクリーンを追加
+        - 期待効果
+          - LCP 改善、体感速度向上
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 完了の定義
+      description: 完了の定義（挙動/表示/測定値など）を明確にしてください
+      placeholder: |
+        - 初回表示のLCPが3.0s以下（4G/中端末）
+        - スケルトンが1s以内に表示される
+        - 主要ブラウザで表示崩れがない
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: 影響範囲（画面/機能/ユーザー）
+      description: 影響が及ぶ範囲や依存する機能を記載してください
+      placeholder: |
+        - 影響画面
+          - 検索一覧 / 商品カード
+        - 依存
+          - 画像最適化、無限スクロール
+    validations:
+      required: false
+
+  - type: textarea
+    id: design
+    attributes:
+      label: UI案 / スクリーンショット
+      description: モック/スクショ/参考リンクなど（任意）
+      placeholder: |
+        - 参考UIのリンク
+        - Before/After 画像 の添付
+    validations:
+      required: false
