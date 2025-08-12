@@ -1,0 +1,43 @@
+name: "🐞 Bug report"
+description: バグの報告
+labels: ["bug"]
+body:
+  - type: input
+    id: context
+    attributes:
+      label: 発生ページ/機能
+      placeholder: 例) /blogs/[id] のコメント欄
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: できるだけ短く番号付きで
+      placeholder: |
+        1. ページにアクセス
+        2. 「送信」ボタンをクリック
+        3. エラー表示
+  - type: input
+    id: expected
+    attributes:
+      label: 期待する動作
+  - type: input
+    id: actual
+    attributes:
+      label: 実際の動作
+  - type: textarea
+    id: env
+    attributes:
+      label: 環境
+      placeholder: |
+        ブラウザ: Chrome 127 / Safari 17.5
+        OS: macOS 14.5 / iOS 17.5
+        画面幅: 390px / 1440px
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: スクリーンショット / 動画
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 影響度
+      options: ["Blocker", "High", "Medium", "Low"]
