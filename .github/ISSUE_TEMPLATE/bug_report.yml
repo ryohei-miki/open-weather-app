@@ -1,34 +1,24 @@
 name: "🐞 バグ報告"
-description: "バグ報告"
 title: "[Bug]: "
 labels: ["bug"]
 body:
-  - type: input
-    id: title
-    attributes:
-      label: タイトル
-      description: Issueのタイトル
-      placeholder: 例) [Bug] ブログ詳細のプレビューが表示されない
-      value: "[Bug] "
-    validations:
-      required: true
-
-  - type: textarea
+  - type: markdown
     id: context
     attributes:
       label: 概要
       description: 発生箇所/機能、バグ内容などを簡潔に記載してください
       placeholder: |
-        - 発生箇所: ブログ詳細 / ブログプレビュー
-        - 症状: プレビューが表示されない
+        - 発生箇所
+          - ブログ詳細 / ブログプレビュー
+        - 現象
+          - プレビューが表示されない
     validations:
       required: true
 
-  - type: textarea
+  - type: markdown
     id: steps
     attributes:
       label: 再現手順
-      description: できるだけ短く番号付きで
       placeholder: |
         1. ブログ詳細ページに遷移
         2. 「下書きに戻して編集」を押下
@@ -36,7 +26,7 @@ body:
     validations:
       required: true
 
-  - type: textarea
+  - type: markdown
     id: expected
     attributes:
       label: 期待する動作
