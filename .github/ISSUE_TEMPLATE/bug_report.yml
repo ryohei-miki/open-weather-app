@@ -5,7 +5,8 @@ body:
   - type: input
     id: title
     attributes:
-      value: [Bug]:
+      value: |
+        [Bug]:
       label: タイトル
       description: Issueのタイトル
     validations:
