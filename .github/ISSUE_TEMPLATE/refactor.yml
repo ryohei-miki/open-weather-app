@@ -1,40 +1,24 @@
 name: "🧹 リファクタ"
-description: "コードのリファクタリングや技術的負債の解消を提案する"
+description: "コードのリファクタリングや技術的負債の解消を提案"
 title: "[Refactor]: "
 labels: ["refactor"]
 body:
   - type: textarea
-    id: context
+    id: contents
     attributes:
-      label: 概要
+      label: 内容
       description: リファクタリングの目的や背景を簡潔に記載してください
-      placeholder: |
+      value: |
+        ## 概要
         - 目的
           - 複製されたフォーム検証ロジックを共通化
         - 背景
           - 保守性向上、バグ混入リスク軽減
-    validations:
-      required: true
-
-  - type: textarea
-    id: scope
-    attributes:
-      label: 対象範囲
-      description: 変更するファイルやコンポーネント、機能などを記載してください
-      placeholder: |
-        - 対象ファイル/ディレクトリ
+        - 対象範囲
           - src/lib/components/common/form/*
           - src/routes/blogs/[blogId]/*
+        - 動作確認 / テスト観点
+          - フォーム送信時のバリデーションが正しく動作する
+          - エラーメッセージが期待通り表示される
     validations:
       required: true
-
-  - type: textarea
-    id: tests
-    attributes:
-      label: 動作確認 / テスト観点
-      description: リファクタ後に確認すべき動作やテストケースを記載してください
-      placeholder: |
-        - フォーム送信時のバリデーションが正しく動作する
-        - エラーメッセージが期待通り表示される
-    validations:
-      required: false
