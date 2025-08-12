@@ -1,0 +1,49 @@
+name: "🐞 バグ報告"
+description: "バグ報告"
+labels: ["bug"]
+body:
+  - type: input
+    id: title
+    attributes:
+      value: [Bug]:
+      label: タイトル
+      description: Issueのタイトル
+    validations:
+      required: true
+  - type: markdown
+    id: context
+    attributes:
+      label: 概要
+      description: 発生箇所/機能、バグ内容などを簡潔に記載してください
+      placeholder: |
+        - ブログ詳細
+        - ブログプレビュー
+    validations:
+      required: true
+  - type: markdown
+    id: steps
+    attributes:
+      label: 再現手順
+      description: バグ発生の再現手順を記載してください
+      placeholder: |
+        1. ブログ詳細ページに遷移
+        2. 下書きに戻して編集を押下
+        3. プレビューボタンを押下
+    validations:
+      required: true
+  - type: markdown
+    id: expected
+    attributes:
+      label: 期待する動作
+      placeholder: |
+        - プレビュー画面が表示される
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: 確認環境
+      description: 再現を確認した環境を1つ以上記載してください
+      placeholder: |
+        ブラウザ: Chrome / Safari
+        OS: macOS 14.5 / iOS
